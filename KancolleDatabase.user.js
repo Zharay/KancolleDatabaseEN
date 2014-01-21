@@ -9,6 +9,7 @@
 // @grant		none
 // ==/UserScript==
 
+// Variables for all translations. Default is Jap, Trans. You can add jsQuery scoping and a page to narrow down its usage. 
 function T(scope, japanese, english, location){
     if (location) {
         this.scope = scope;
@@ -441,11 +442,9 @@ function translate(){
         }
     }
     console.log('Replaced:', cntSimple, cntScoped);
-	//GM_log('Replaced:', cntSimple, cntScoped);
 }
 
 translate();
-// setInterval(translate, 2000);
 addExtraCSS();
 unsafeWindow.$ = $;
 unsafeWindow.translations = translations;
