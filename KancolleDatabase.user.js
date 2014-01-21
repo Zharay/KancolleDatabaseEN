@@ -1,12 +1,13 @@
 // ==UserScript==
 // @name		Kancolle Database! Translation
-// @namespace	http://www.danvargas404.net
+// @namespace	https://github.com/Zharay/KancolleDatabaseEN/
 // @version		1.0
 // @description Translate most of Kancolle Database! Warning: Don't waste all your resources on your daughters.... Okay keep it reasonable.
 // @match		http://*.kancolle-db.tk/*
 // @match		https://*.kancolle-db.tk/*
 // @require		http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js
 // @grant		none
+// @updateURL	https://github.com/Zharay/KancolleDatabaseEN/raw/master/KancolleDatabase.meta.js
 // ==/UserScript==
 
 // Variables for all translations. Default is Jap, Trans. You can add jsQuery scoping and a page to narrow down its usage. 
@@ -331,6 +332,7 @@ var translations = [
 	new T('秘書LV', 'Secretary LV'),
 	new T('秘書艦(種)', 'Secretary Ship'),
 	new T('秘書艦', 'Secretary Ship'),
+	new T('司令LV範囲', 'HQ LV Range'),
 	new T('司令LV', 'HQ LV'),
 	new T('トリップ', 'Trip'),
 	new T('規約', 'Terms'),
@@ -349,7 +351,6 @@ var translations = [
     new T('航空機', 'Aircraft'),
     new T('探信儀', 'Sonar'),
 	new T('確率', 'Probability'),
-	new T('司令LV範囲', 'HQ Level Range'),
 	new T('主な秘書艦種', 'Secretary Ship Type'),
 	new T('報告数', 'Report Count'),
 	new T('艦別情報', 'Ship-specific Info'),
