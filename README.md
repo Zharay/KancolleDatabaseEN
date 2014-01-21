@@ -8,9 +8,8 @@ http://userscripts.org/scripts/show/270227
 
 This has been modified for our purposes.
 
-=========================
 Contributions and Changes
-=========================
+-------------------------
 
 Feel free to commit any changes as you see fit! I'll be sure to review any changes made and delete only those changes made that are deemed inappropriate.
 
