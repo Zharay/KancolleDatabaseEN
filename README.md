@@ -1,7 +1,7 @@
 KancolleDatabaseEN
 ==================
 
-A userscript project that translate most of the Database Kancolle! website into English.
+A userscript project that translates most of the Database Kancolle! website into English.
 
 The script itself was based off another script for translating tabao.com. And has been modified for our purposes.
 http://userscripts.org/scripts/show/270227
