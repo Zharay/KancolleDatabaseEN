@@ -430,7 +430,8 @@ function addGlobalStyle(css) {
     head.appendChild(style);
 }
 
-function addExtraCSS(){
+function addExtraCSS() {
+	addGlobalStyle('div#layout_right>div.element_list>div>ul>li { line-height: 1.5em; margin: 0.5em 0 0.5em; overflow: auto; }');
 }
 
 function replaceAll(str, pattern, replacement){
