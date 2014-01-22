@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name		Kancolle Database! Translation
 // @namespace	http://zharay.github.io/KancolleDatabaseEN/
-// @version		1.01
+// @version		1.02
 // @description Translate most of Kancolle Database! Warning: Don't waste all your resources on your daughters.... Okay keep it reasonable.
 // @match		http://*.kancolle-db.tk/*
 // @match		https://*.kancolle-db.tk/*
@@ -88,7 +88,22 @@ var translations = [
     new T('潜水艦', 'Submarine'),
     new T('潜水空母', 'Submarine Carrier'),
     new T('揚陸艦', 'Amphibious Assault'),
-		
+	
+	// Ship Types / Side Navigation -- Selection Labels
+	new T('optgroup', '航空戦艦', 'Aviation Battleship'),
+    new T('optgroup', '戦艦', 'Battleship'),
+    new T('optgroup', '正規空母', 'Regular Aircraft Carrier'),
+    new T('optgroup', '軽空母', 'Light Aircraft Carrier'),
+    new T('optgroup', '水上機母艦', 'Seaplane Tender'),
+	new T('optgroup', '航空巡洋艦', 'Aviation Cruiser'),
+    new T('optgroup', '重巡洋艦', 'Heavy Cruiser'),
+	new T('optgroup', '重雷装巡洋艦', 'Heavy Torpedo Cruiser'),
+    new T('optgroup', '軽巡洋艦', 'Light Cruiser'),
+    new T('optgroup', '駆逐艦', 'Destroyer'),
+    new T('optgroup', '潜水艦', 'Submarine'),
+    new T('optgroup', '潜水空母', 'Submarine Carrier'),
+    new T('optgroup', '揚陸艦', 'Amphibious Assault'),
+	
 	// Fixes for Kai moniker
 	new T('改良型艦本式タービン', 'Improved Steam Turbine'),
 	
@@ -326,6 +341,23 @@ var translations = [
     new T('弾薬', 'Ammo'),
     new T('爆雷', 'Depth Charge'),
 	
+	// Equipment -- Types (Labels)
+    new T('optgroup', '失敗', 'Failure'),
+    new T('optgroup', '主砲', 'Main Gun'),
+    new T('optgroup', '副砲', 'Sub Gun'),
+    new T('optgroup', '機銃', 'Machine Gun'),
+    new T('optgroup', '魚雷', 'Torpedo'),
+    new T('optgroup', '攻撃機', 'Torpedo Bomber'),
+    new T('optgroup', '戦闘機', 'Fighter'),
+    new T('optgroup', '爆撃機', 'Dive Bomber'),
+    new T('optgroup', '偵察機', 'Recon Plane'),
+    new T('optgroup', '水上機', 'Seaplane'),
+    new T('optgroup', '電探', 'Air Radar'),
+    new T('optgroup', 'ソナー', 'Sonar'),
+    new T('optgroup', '機関', 'Engine'),
+    new T('optgroup', '弾薬', 'Ammo'),
+    new T('optgroup', '爆雷', 'Depth Charge'),	
+	
 	// Main Page -- Construction / Development
 	new T('燃料', 'Fuel'),
 	new T('鋼材', 'Steel'),
@@ -379,7 +411,7 @@ var translations = [
     new T('潮', 'Ushio'),
     new T('響', 'Hibiki'),
     new T('雷', 'Ikazuchi'),
-    new T('電', 'Inzauma'),
+    new T('電', 'Inazuma'),
     new T('霰', 'Arare'),
     new T('霞', 'Kasumi'),
     new T('朧', 'Oboro'),
@@ -411,8 +443,10 @@ function replaceAll(str, pattern, replacement){
 function applyTranslationToElement(elem, translation){
 	if (elem.nodeName == '#text') {
         elem.textContent = replaceAll(elem.textContent, translation.japanese, translation.english);
-    } else if (elem.nodeName == 'INPUT' && String(elem.value).indexOf(translation.japanese) >=0) {
+    } else if (elem.nodeName == 'INPUT') {
 		elem.value = replaceAll(String(elem.value), translation.japanese, translation.english);
+	} else if (elem.nodeName == 'OPTGROUP') {
+		elem.label = replaceAll(String(elem.label), translation.japanese, translation.english);
 	} else {
         $(elem).contents().each(function(index, elem){
             applyTranslationToElement(elem, translation)
@@ -436,7 +470,7 @@ function translate(){
         var t = translations[i];
         if ( (t.scope && !t.location) || (t.scope && t.location && location.pathname.indexOf(t.location) >= 0) ) {		
             $(t.scope).each(function(index, elem){
-                if (elem.textContent.indexOf(t.japanese) >= 0 || (elem.nodeName == 'INPUT' && String(elem.value).indexOf(t.japanese) >= 0)) {
+                if (elem.textContent.indexOf(t.japanese) >= 0 || (elem.nodeName == 'INPUT' && String(elem.value).indexOf(t.japanese) >= 0) || (elem.nodeName == 'OPTGROUP' && String(elem.label).indexOf(t.japanese) >= 0)) {
 					applyTranslationToElement(elem, t);
 					cntScoped++;
 				}
