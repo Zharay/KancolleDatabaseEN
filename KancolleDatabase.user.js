@@ -1,10 +1,11 @@
 // ==UserScript==
 // @name		Kancolle Database! Translation
 // @namespace	http://zharay.github.io/KancolleDatabaseEN/
-// @version		1.03
+// @version		1.04
 // @description Translate most of Kancolle Database! Warning: Don't waste all your resources on your daughters.... Okay keep it reasonable.
 // @match		http://*.kancolle-db.tk/*
 // @match		https://*.kancolle-db.tk/*
+// @match		http://www51.atpages.jp/kancollev/*
 // @require		http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js
 // @grant		none
 // @updateURL	https://github.com/Zharay/KancolleDatabaseEN/raw/master/KancolleDatabase.meta.js
@@ -88,6 +89,9 @@ var translations = [
     new T('潜水艦', 'Submarine'),
     new T('潜水空母', 'Submarine Carrier'),
     new T('揚陸艦', 'Amphibious Assault'),
+	new T('海防艦', 'Escort Ship'),
+	new T('超弩級戦艦', 'Super Dreadnaught'),
+	new T('補給艦', 'Supply Ship'),
 	
 	// Ship Types / Side Navigation -- Selection Labels
 	new T('optgroup', '航空戦艦', 'Aviation Battleship'),
@@ -103,6 +107,9 @@ var translations = [
     new T('optgroup', '潜水艦', 'Submarine'),
     new T('optgroup', '潜水空母', 'Submarine Carrier'),
     new T('optgroup', '揚陸艦', 'Amphibious Assault'),
+	new T('optgroup', '海防艦', 'Escort Ship'),
+	new T('optgroup', '超弩級戦艦', 'Super Dreadnaught'),
+	new T('optgroup', '補給艦', 'Supply Ship'),
 	
 	// Fixes for Kai moniker
 	new T('改良型艦本式タービン', 'Improved Steam Turbine'),
