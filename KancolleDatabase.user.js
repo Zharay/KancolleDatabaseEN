@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name		Kancolle Database! Translation
 // @namespace	http://zharay.github.io/KancolleDatabaseEN/
-// @version		1.05
+// @version		1.06
 // @description Translate most of Kancolle Database! Warning: Don't waste all your resources on your daughters.... Okay keep it reasonable.
 // @match		http://*.kancolle-db.tk/*
 // @match		https://*.kancolle-db.tk/*
@@ -59,6 +59,7 @@ var translations = [
     new T('トップ', 'Top'),
     new T('艦娘一覧', 'Ship Daughter List'),
     new T('装備一覧', 'Equipment List'),
+	new T('大型艦建造', 'Large Ship Construction'),
     new T('建造', 'Construction'),
     new T('開発', 'Development'),
     new T('検索(ベータ)', 'Search (Beta)'),
@@ -271,6 +272,7 @@ var translations = [
     new T('61cm三連装魚雷', '61cm Triple Torpedo'),
     new T('61cm四連装魚雷', '61cm Quad Torpedo'),
     new T('61cm四連装酸素魚雷', '61cm Quad (Oxygen) Torpedo'),
+    new T('61cm四連装(酸素)魚雷', '61cm Quad (Oxygen) Torpedo'),
     new T('九七式艦攻', 'Type 97 Torpedo Bomber'),
     new T('天山', 'Tenzan'),
     new T('流星', 'Ryuusei'),
@@ -297,6 +299,7 @@ var translations = [
     new T('25mm連装機銃', '25mm Dual Gun'),
     new T('25mm三連装機銃', '25mm Triple Gun'),
     new T('甲標的', 'Type A Ko-hyoteki'),
+    new T('標的甲', 'Type A Ko-hyoteki'),
     new T('応急修理要員', 'Repair Team'),
     new T('応急修理女神', 'Repair Goddess'),
     new T('九四式爆雷投射機', 'Type 94 Depth Charge'),
@@ -311,6 +314,7 @@ var translations = [
 	new T('紫電', 'Shiden (Violet Lightning)'),
     new T('震電', 'Shiden (Magnificent Lightning)'),
     new T('61cm五連装酸素魚雷', '61cm Quintuple (Oxygen) Torpedo'),
+    new T('61cm五連装(酸素)魚雷', '61cm Quintuple (Oxygen) Torpedo'),
     new T('零式水上観測機', 'Type 0 Observation Seaplane'),
     new T('零戦六二型(爆戦)', 'Type 62 Zero Fighter (Bomber)'),
     new T('二式艦上偵察機', 'Type 2 Recon Plane'),
@@ -331,6 +335,8 @@ var translations = [
     new T('15.5cm三連装砲(副砲)', '15.5cm Triple Cannon (Secondary)'),
     new T('15.5cm三連装副砲', '15.5cm Triple Cannon (Secondary)'),
 	new T('ペンギン', 'Penguin'),
+	new T('ドラム缶(輸送用)', 'Drum (Transport)'),
+	new T('零式艦戦62型(爆戦)', 'Type 62 Zero Fighter-bomber'),
 	
 	// Equipment -- Types
     new T('失敗', 'Failure'),
