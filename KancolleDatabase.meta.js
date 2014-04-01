@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name		Kancolle Database! Translation
 // @namespace	http://zharay.github.io/KancolleDatabaseEN/
-// @version		1.07
+// @version		1.08
 // @description Translate most of Kancolle Database! Warning: Don't waste all your resources on your daughters.... Okay keep it reasonable.
 // @match		http://*.kancolle-db.tk/*
 // @match		https://*.kancolle-db.tk/*

@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name		Kancolle Database! Translation
 // @namespace	http://zharay.github.io/KancolleDatabaseEN/
-// @version		1.07
+// @version		1.08
 // @description Translate most of Kancolle Database! Warning: Don't waste all your resources on your daughters.... Okay keep it reasonable.
 // @match		http://*.kancolle-db.tk/*
 // @match		https://*.kancolle-db.tk/*
@@ -116,6 +116,7 @@ var translations = [
 	
 	// Fixes for Kai moniker
 	new T('改良型艦本式タービン', 'Improved Steam Turbine'),
+	new T('改造可能レベル', 'Mod Lv'),
 	
 	// Ship Daughters
     new T('改二', ' Kai-2'),
@@ -250,6 +251,8 @@ var translations = [
     new T('夕雲', 'Yuugumo'),
     new T('巻雲', 'Makigumo'),
     new T('長波', 'Naganami'),
+    new T('弥生', 'Yayoi'),
+    new T('卯月', 'Uzuki'),
 	
 	// Ship Daughters -- SS
     new T('伊168', 'I-168'),
@@ -421,6 +424,24 @@ var translations = [
 	new T('秘書', 'Secretary'),
 	new T('検索', 'Search'),
 	new T(':input', '検索', 'Search', 'search'),
+	
+	// Stats
+	new T('名前', 'Name'),
+    new T('火力', 'Firepower'),
+    new T('対空', 'AA'),
+    new T('雷装', 'Torp'),
+    new T('対潜', 'ASW'),
+    new T('索敵', 'Sight'),
+    new T('運', 'Luck'),
+    new T('耐久', 'HP'),
+    new T('装甲', 'Armor'),
+    new T('回避', 'Evasion'),
+    new T('速力', 'Speed'),
+    new T('高速', 'Fast'),
+    new T('搭載', 'Equip'),
+    new T('スロット', 'Slot'),
+    new T('特徴', 'Feature'),
+	
 		
 	// Ship Daughters -- Single Kanji -- This broke shit if it wasn't at the end.
     new T('潮', 'Ushio'),
@@ -432,6 +453,9 @@ var translations = [
     new T('朧', 'Oboro'),
     new T('曙', 'Akebono'),
     new T('漣', 'Sazanami'),
+	
+	// Titles -- Single Kanji
+    new T('型', 'Class'),
 	
 ]
 
